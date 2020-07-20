@@ -1,7 +1,7 @@
 import React from 'react'
 import Portfolio from '../Components/Tables/Portfolio'
 import BuyStockForm from '../Components/Forms/BuyStock'
-import Navbar from '../Components/Navbar/Navbar'
+import Navbar from '../Navbar/Navbar.js'
 
 
 
