@@ -24,7 +24,7 @@ export class App extends Component {
   //retrieve logged in users profile upon login
   componentDidMount() {
     let token = localStorage.token;
-    fetch('http://localhost:3000/api/v1/get_user', {
+    fetch('http://ttp-backend-kd.herokuapp.com/api/v1/get_user', {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -87,7 +87,7 @@ export class App extends Component {
 
  //post purchase to backend transactions endpoint 
   buyStock = (user, symbol, price,quantity) => {
-    fetch("http://localhost:3000/api/v1/transactions", {
+    fetch("http://ttp-backend-kd.herokuapp.com/api/v1/transactions", {
       method: "POST",
       headers: {
         "content-type": "application/json",

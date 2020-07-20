@@ -21,7 +21,7 @@ export default class LoginSignUpContainer extends Component {
     signUpSubmitHandler = (e) => {
         e.preventDefault()
         const {email, name, password} = this.state
-        fetch("http://localhost:3000/api/v1/users", {
+        fetch("http://ttp-backend-kd.herokuapp.com/api/v1/users", {
             method: "POST",
             headers:{
                 "content-type": "application/json",
@@ -45,7 +45,7 @@ export default class LoginSignUpContainer extends Component {
     loginSubmitHandler = (e) => {
       e.preventDefault()
       const {email, password} = this.state
-      fetch("http://localhost:3000/api/v1/login", {
+      fetch("http://ttp-backend-kd.herokuapp.com/api/v1/login", {
         method: "POST",
         headers: {
           "content-type": "application/json",
