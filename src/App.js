@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Redirect, Route, withRouter } from 'react-router-dom'
 import Transactions from './Components/Tables/Transactions'
 import PortfolioContainer from './Containers/PortfolioContainer'
 import LoginSignUpContainer from './Containers/LoginSignUpContainer';
@@ -124,6 +124,7 @@ export class App extends Component {
     return (
      <>
         <Switch>
+          <Redirect exact from='/' to='/login' />
           <Route path='/login' render= {(props) => <LoginSignUpContainer {...props} user={user} setUser={setUser} />}/>
           <Route path='/signup' component={(props) => <LoginSignUpContainer {...props} user={user} setUser={setUser} />}/>
           <Route path='/portfolio' component={(props) => <PortfolioContainer user={user} transactions={transactions} logOut={this.logOut} handleOnSubmitBuyButton={this.handleOnSubmitBuyButton} />}/>

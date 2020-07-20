@@ -10,7 +10,7 @@ export default class LoginSignUpContainer extends Component {
         email: '',
         name: '',
         password: '',
-        clicked: !this.props.history.location === '/login'
+        clicked: this.props.history.location === '/login'
     }
     
     changeHandler = (e) => {
