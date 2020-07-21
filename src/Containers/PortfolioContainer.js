@@ -11,7 +11,7 @@ const PortfolioContainer = (props) => {
 
         return (
             <>
-            // <Navbar logOut={logOut} user={user}/>
+        //    <Navbar logOut={/*logOut*/} user={/*user*/}/>
             <div className="p-container">
                <Portfolio user={user} transactions={transactions}/>
                <BuyStockForm handleOnSubmitBuyButton={props.handleOnSubmitBuyButton} user={props.user}/>
